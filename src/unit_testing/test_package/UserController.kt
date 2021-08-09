@@ -1,7 +1,5 @@
 package unit_testing.test_package
 
-import org.junit.BeforeClass
-import org.junit.Test
 import unit_testing.source_package.UserRepository
 import kotlin.test.assertEquals
 
