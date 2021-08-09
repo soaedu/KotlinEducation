@@ -1,7 +1,7 @@
 package unit_testing.test_package.math
 
-import org.junit.Assert.assertEquals
-import org.junit.Test
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Test
 import unit_testing.source_package.math.MathOperations
 
 class MathOperationsTests {

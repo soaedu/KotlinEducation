@@ -13,13 +13,13 @@ class User(val id: String, val name: String, val address: String)
 
 // #1 Обычное решение с дублирование проверки полей
 fun saveUser_1(user: User) {
-    if (user.name.isEmpty) {
+    if (user.name.isEmpty()) {
         throw IllegalStateException(
                 "Can't save user ${user.id}: empty name"
         )
     }
 
-    if (user.address.isEmpty) {
+    if (user.address.isEmpty()) {
         throw IllegalStateException(
                 "Can't save user ${user.id}: empty address"
         )

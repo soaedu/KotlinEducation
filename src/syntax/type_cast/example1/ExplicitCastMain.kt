@@ -1,6 +1,6 @@
 package data.operations.type_cast.example1
 
-fun main(args: Array<String>) {
+fun main() {
 
     val userData : Map<String, Any?> = getUserData();
 
@@ -25,8 +25,14 @@ fun main(args: Array<String>) {
 }
 
 fun getUserData(): Map<String, Any?> {
-    return mapOf("username" to "Bilbo Sumkin", "useraddress" to 1, "userphone" to null) as Map<String, Any?>
-    // return mapOf("username" to "Bilbo Sumkin", "useraddress" to 1, "userphone" to 1) as Map<String, Any?>
+    // userPhone: case #1
+    // return mapOf("username" to "Bilbo Sumkin", "useraddress" to 1, "userphone" to "123456789") as Map<String, Any?>
+
+    // userPhone: case #2
+    // return mapOf("username" to "Bilbo Sumkin", "useraddress" to 1, "userphone" to null) as Map<String, Any?>
+
+    // userPhone: case #3
+    return mapOf("username" to "Bilbo Sumkin", "useraddress" to 1, "userphone" to 1) as Map<String, Any?>
 }
 
 

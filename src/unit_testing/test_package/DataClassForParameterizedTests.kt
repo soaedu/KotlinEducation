@@ -1,6 +1,5 @@
 package unit_testing.test_package
 
-import org.hamcrest.MatcherAssert.assertThat
 import org.junit.jupiter.api.Test
 
 class DataClassForParameterizedTests {

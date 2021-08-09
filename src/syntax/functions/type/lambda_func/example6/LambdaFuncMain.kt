@@ -13,7 +13,7 @@ fun main() {
      *
      * Поиск с использованием ссылки на член
      */
-    println("1. ${people.maxBy(Person::age)}")
+    println("1. ${people.maxByOrNull(Person::age)}")
 
     /**
      * Можно создать ссылку на функцию верхнего уровня (и не являющуюся членом класса)

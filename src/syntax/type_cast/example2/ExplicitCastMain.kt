@@ -1,10 +1,10 @@
 package data.operations.type_cast.example2
 
-fun main(args: Array<String>) {
+fun main() {
     val str = "Abcd"
     val nullStr = null
-    println("\nThe length of the string \"$str\" is: ${length(str)}")
-    println("\nThe length of the null string is: ${length(nullStr)}")
+    println("1. \"$str\" length is: ${length(str)}")
+    println("2. null string length is: ${length(nullStr)}")
 }
 
 // #1
@@ -23,7 +23,7 @@ fun length(any: Any?): Int {
 }*/
 
 // #3
-// Returns null as a result of the calculation of the length when the value is null
+// Returns null as the length calculation result when the value is null
 fun length(any: Any?): Int? {
     val string: String? = any as? String
     return string?.length
