@@ -1,6 +1,6 @@
 package syntax.functions.type.inline_func.example3
 
-fun main(args: Array<String>) {
+fun main() {
     println("\nResult: ${getResult()}")
 }
 
@@ -15,7 +15,7 @@ inline fun bar(angle: Double, f: (Double) -> Double): Double {
     return f(angle)
 }
 
-// if this function is "inline" it work good
+// if this function is "inline" it works good
 fun youShallNotPrintlnAfterEmptyStr(list: List<String>) {
     list.forEach { str ->
         if (str.isEmpty()) return // Non-local return

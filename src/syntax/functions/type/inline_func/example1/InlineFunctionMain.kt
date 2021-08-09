@@ -1,6 +1,6 @@
 package syntax.functions.type.inline_func.example1
 
-fun main(args: Array<String>) {
+fun main() {
     val myLambda: (String) -> Unit = {s: String -> print(s)}
     val value = " TutorialsPoint.com"
     myFunc(value, myLambda)     // passing lambda as a parameter of another function

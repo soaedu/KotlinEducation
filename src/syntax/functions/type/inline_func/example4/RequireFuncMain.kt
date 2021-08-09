@@ -1,7 +1,10 @@
 package syntax.functions.type.inline_func.example4
 
 fun main() {
+    print("1. ")
     neverEmpty("Test String")
+
+    print("2. ")
     neverEmpty("")
 }
 
