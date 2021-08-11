@@ -2,7 +2,7 @@ package data.type.arrays
 
 import Utils.printCollection
 
-fun main(array: Array<String>) {
+fun main() {
     onlyJavaWorkingExample()
 
     val intArray1 = arrayOf(1, 1, 2, 3, 5, 8, 13)
