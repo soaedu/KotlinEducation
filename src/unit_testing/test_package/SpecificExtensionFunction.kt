@@ -1,6 +1,5 @@
 package unit_testing.test_package
 
-import org.junit.Assert.assertThat
 import org.junit.jupiter.api.Test
 
 class SpecificExtensionFunction {

@@ -18,12 +18,12 @@ fun main() {
      * Этот код повторяет процесс поиска максимального возраста для каждого человека - следовательно, если в коллекции
      * хранится список из 1 00 человек, поиск максимального возраста будет выполнен 100 раз!
      */
-    println("4. ${list.filter { it.age == list.maxBy(Person::age)?.age }}")
+    println("4. ${list.filter { it.age == list.maxByOrNull(Person::age)?.age }}")
 
     /**
      * Тут рассчитывается максимальный возраст только один раз.
      */
-    val maxAge = list.maxBy(Person::age)?.age
+    val maxAge = list.maxByOrNull(Person::age)?.age
     println("5. ${list.filter { it.age == maxAge}}")
 
     /**

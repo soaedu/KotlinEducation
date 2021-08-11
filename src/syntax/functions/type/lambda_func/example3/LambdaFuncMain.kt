@@ -12,10 +12,14 @@ fun main() {
 
     // #2
     // we can use "return" with label
-    bar(Math.PI) { angle ->
+    val result = bar(Math.PI) { angle ->
         if (angle == 0.0) return@bar Double.NaN
         return@bar Math.sin(angle) + Math.cos(angle)
     }
+    println("1. sin: ${Math.sin(Math.PI)} \ncos: ${Math.cos(Math.PI)} \nsin+cos: $result")
+
+    val fruits = listOf("", "", "Banana", "Apple", "", "Pear", "Peach",  "", "Plum", "Lemon", "")
+    youShallPrintlnAfterEmptyStr(fruits)
 }
 
 fun bar(angle: Double, f: (Double) -> Double): Double {
@@ -23,6 +27,8 @@ fun bar(angle: Double, f: (Double) -> Double): Double {
 }
 
 fun youShallPrintlnAfterEmptyStr(list: List<String>) {
+    println("2. show fruits")
+
     list.forEach { str ->
         if (str.isEmpty()) return@forEach
         println(str)

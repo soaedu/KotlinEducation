@@ -1,7 +1,7 @@
 package syntax.annotations.example1;
 
 // import syntax.annotations.example1.strings.JoinKt;
-import syntax.annotations.example1.strings.StringFunctions;
+import syntax.annotations.example1.strings.*;
 
 import java.util.ArrayList;
 
