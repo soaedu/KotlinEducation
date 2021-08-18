@@ -16,8 +16,7 @@ class BetterConfig(val data: MutableMap<String, Any?>) {
     var Url: String by data
 }
 
-/*
-class Delegate {
+/*class Delegate {
     operator fun getValue(thisRef: Any?, property: KProperty<*>): String {
         // get the actual value you want
     }
@@ -25,8 +24,7 @@ class Delegate {
     operator fun setValue(thisRef: Any?, property: KProperty<*>, value: String) {
         // set the actual value you want
     }
-}
-*/
+}*/
 
 /*
 // getter

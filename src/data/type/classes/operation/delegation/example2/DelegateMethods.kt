@@ -59,17 +59,15 @@ data class MutableFileTree(
 }
 */
 
-/*
 // #2
 data class MutableFileTree(
         private val data: MutableMap<String, MutableFileTree> = mutableMapOf(),
         // #1
-        var changed: Boolean = false): MutableMap<String, MutableFileTree> by data
-
+        var changed: Boolean = false): MutableMap<String, MutableFileTree> by data {
 
         // #2
         // possible
         // var changed: Boolean = false): MutableMap<String, MutableFileTree> by data {
         //     override some methods, fields, properties
         // }
-}*/
+}
