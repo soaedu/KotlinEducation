@@ -7,6 +7,7 @@ fun main() {
 fun getResult(): Double {
     return bar(Math.PI) { angle ->
         if (angle == 0.0) return Double.NaN
+
         return Math.sin(angle) + Math.cos(angle)
     }
 }

@@ -1,16 +1,15 @@
 package data.type.classes.operation.delegation.example4
 
 /**
- * Часто бывает нужно добавить поведение в другой класс, даже если он
- * не предназначен для наследования.
- * Для этого применяется шаблон <Декоратор>. Он создает новый класс с тем же интерфейсом,
- * что у оригинального класса, и сохраняет экземпляр оригинального класса в поле нового класса.
- * Методы, поведение которых должно остаться неизменным, просто передают вызовы оригинальному
- * экземпляру класса.
+ * Часто бывает нужно добавить поведение в другой класс, даже если он не предназначен для наследования.
+ * Для этого применяется шаблон <Декоратор>. Он создает новый класс с тем же интерфейсом, что у оригинального класса,
+ * и сохраняет экземпляр оригинального класса в поле нового класса.
+ * Методы, поведение которых должно остаться неизменным, просто передают вызовы оригинальному экземпляру класса.
  * Недостаток такого подхода - большой объем шаблонного кода.
- * К счастью, при использовании Kotlin писать столько кода не нужно, потому что он предоставляет
- * полноценную поддержку делегирования на уровне языка. Всякий раз, реализуя интерфейс, вы можете
- * делегировать реализацию другому объекту, добавив ключевое слово "by".
+ *
+ * К счастью, при использовании Kotlin писать столько кода не нужно, потому что он предоставляет полноценную поддержку
+ * делегирования на уровне языка. Всякий раз, реализуя интерфейс, вы можете делегировать реализацию другому объекту,
+ * добавив ключевое слово "by".
  */
 fun main() {
     val cset = CountingSet<Int>()
@@ -22,21 +21,21 @@ fun main() {
 // #1
 // Вот сколько кода понадобится декоратору, чтобы реализовать простой интерфейс Collection
 // даже притом, что он не изменяет поведения исходного класса.
-//class DelegatingCollection<T> : Collection<T> {
-//    private val innerList = arrayListOf<T>( )
-//
-//    override val size : Int get() = innerList.size
-//    override fun isEmpty(): Boolean = innerList.isEmpty()
-//    override fun contains(element: T): Boolean = innerList.contains(element)
-//    override fun iterator() : Iterator<T> = innerList.iterator()
-//    override fun containsAll(elements : Collection<T>) : Boolean = innerList.containsAll(elements)
-//}
+/*class DelegatingCollection<T> : Collection<T> {
+    private val innerList = arrayListOf<T>( )
+
+    override val size : Int
+        get() = innerList.size
+    override fun isEmpty(): Boolean = innerList.isEmpty()
+    override fun contains(element: T): Boolean = innerList.contains(element)
+    override fun iterator() : Iterator<T> = innerList.iterator()
+    override fun containsAll(elements : Collection<T>) : Boolean = innerList.containsAll(elements)
+}*/
 
 // #2
 // При использовании Kotlin писать столько кода не нужно, потому что он предоставляет полноценную
 // поддержку делегирования на уровне языка.
-// Всякий раз, реализуя интерфейс, вы можете делегировать реализацию другому объекту, добавив
-// ключевое слово by
+// Всякий раз, реализуя интерфейс, вы можете делегировать реализацию другому объекту, добавив ключевое слово "by"
 class DelegatingCollection<T>(
         innerList: Collection<T> = ArrayList<T>()
 ) : Collection<T> by innerList {}

@@ -1,4 +1,4 @@
-package syntax.functions.overload
+package syntax.functions.operation.overload
 
 fun main() {
     println("1. ${printString("test")}")
