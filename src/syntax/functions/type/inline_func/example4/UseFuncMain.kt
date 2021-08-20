@@ -18,7 +18,9 @@ fun main() {
 }
 
 fun readFirstLineFromFile(path: String): String {
-    BufferedReader(FileReader(path)).use { br ->
-        return br.readLine()
+    BufferedReader(FileReader(path)).use { br ->        // Создается зкземппяр BufferedReader,
+                                                        // вызывается функция «use», и ей передается лямбда-выражение,
+                                                        // выполняющее операцию с файлом
+        return br.readLine()                            // Возвращается строка, прочитанная из файла
     }
 }
