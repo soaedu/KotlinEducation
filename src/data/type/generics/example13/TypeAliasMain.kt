@@ -1,4 +1,4 @@
-package generics.example2
+package data.type.generics.example13
 
 /*
 // #1

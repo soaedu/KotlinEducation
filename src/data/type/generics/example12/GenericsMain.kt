@@ -1,18 +1,18 @@
-package generics.example1
+package data.type.generics.example12
 
 fun main(args: Array<String>) {
     println("\nObject#1: ")
-    genericsExample<String>("JAVA")
+    GenericsExample<String>("JAVA")
 
     println("\nObject#2: ")
-    genericsExample<Int>(10)
+    GenericsExample<Int>(10)
 }
 
 // #1
-// class genericsExample<T>(input:T) {
+// class GenericsExample<T>(input:T) {
 
 // #2
-class genericsExample<out T>(input:T) {
+class GenericsExample<out T>(input:T) {
     init {
         println("\tI am getting called with the value "+input)
     }
