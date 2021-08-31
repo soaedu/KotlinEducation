@@ -1,6 +1,6 @@
 package syntax.control_flow.if_else
 
-fun main(args: Array<String>) {
+fun main() {
     val a:Int = 5
     val b:Int = 2
     var max: Int
