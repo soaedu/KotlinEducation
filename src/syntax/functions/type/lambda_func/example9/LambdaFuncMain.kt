@@ -38,4 +38,15 @@ fun main() {
      * Вернет первый найденный элемент, а не все, которые удовлетворяют предикату.
      */
     println("6. ${listOfPeople.find(canBeInClub27)}")
+
+    val isEven = { i: Int -> (i%2) == 0 }
+    val intList = listOf(1, 2, 3, 4)
+
+    println("7. has at least one even number: ${intList.any(isEven)}")
+    println("8. show all even numbers: ${intList.filter(isEven)}")
+
+    fun isEven(i: Int): Boolean = (i%2) == 0
+    println("9. has at least one even number: ${intList.any(::isEven)}")    // Несвязанная ссылка, т.к. указывает на
+    println("10. show all even numbers: ${intList.filter(::isEven)}")       // функцию расширение, а не на конкретный
+                                                                            // экземпляр класса.
 }
