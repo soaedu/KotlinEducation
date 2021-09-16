@@ -3,6 +3,7 @@ package syntax.functions.type.inline_func.example1
 import java.util.concurrent.TimeUnit
 import java.util.concurrent.locks.Condition
 import java.util.concurrent.locks.Lock
+import kotlin.concurrent.withLock
 
 /**
  * Как работает встраивание функций
@@ -32,6 +33,10 @@ fun main() {
     }
     synchronized(l) {
         // ...
+    }
+
+    l.withLock {
+        // access the resource protected by this lock
     }
 }
 
@@ -100,3 +105,4 @@ class LockOwner(val lock: Lock) {
 }*/
 // Если использовать встраиваемую функцию в двух разных местах с разными лямбда-выражениями, каждый вызов встроится
 // независимо. Код встраиваемой функции скопируется в оба места, но с разными лямбда-выражениями.
+

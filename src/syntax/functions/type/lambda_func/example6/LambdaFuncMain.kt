@@ -54,10 +54,10 @@ fun main() {
      */
     val p2 = Person("Alex", 28)
     val personsAgeFunction = Person::age
-    println("6. ${p2.name} age is: ${personsAgeFunction(p2)}")
+    println("6. ${p2.name} age is: ${personsAgeFunction(p2)}")  // Несвязанная ссылка
 
     val alexAgeFunction = p2::age
-    println("7. Alex age is: ${alexAgeFunction()}")  // Связанная ссылка, доступная в Kotlin 1.1
+    println("7. Alex age is: ${alexAgeFunction()}")             // Связанная ссылка, доступная в Kotlin 1.1
 
     // Обратите внимание, что функция:
     //  * personsAgeFunction принимает один аргумент (и возвращает возраст конкретного человека)

@@ -1,28 +1,18 @@
 package syntax.functions.type.lambda_func.example11
 
-import java.io.File
-
-/**
- * Последовательность также можно создать вызовом функции generateSequence().
- * Она вычисляет следующий элемент последовательности на основании предыдущего.
- *
- * Вы создаете последовательность, предоставляя первый элемент и способ получения каждого последующего элемента.
- */
 fun main() {
-    // Подсчитаем сумму всех натуральных чисел до 100.
-    val naturalNumbers = generateSequence(0) { it + 1 }
-    val numbersTo100 = naturalNumbers.takeWhile { it <= 100 }
-    // naturalNumbers и numbersTo100 - последовательности с отложенным выполнением операций
-    // Все отложенные операции выполнятся при обращении к sum()
-    println("1. ${numbersTo100.sum()}")
-
-    // Другой распространенный вариант использования - это последовательность родителей.
-    // Если у элемента есть родитель того же типа (например, человек или Jаvа-файл), вас могут заинтересовать
-    // свойства всех его предков в последовательности.
-    val file = File("/home/ostin/.config/Android Open Source Project/Emulator.conf")
-    println("2. ${file.insideHiddenDirectory()}")
-    println("3. ${file.getHiddenDirectory()}")
+    val list = listOf(1, 2, 3, 4)
+    println("1. result: ${list.map(::m).filter(::f)}")  //m1 m2 m3 m4 f1 f2 f3 f4
+    println("2. result: ${list.asSequence().map(::m).filter(::f).toList()}") // m1 f1 m2 f2 m3 f3 m4 f4
+    println("3. result: ${list.asSequence().filter(::f).map(::m).toList()}") // f1 f2 m2 f3 f4 m4
 }
 
-fun File.insideHiddenDirectory() = generateSequence(this) { it.parentFile }.any { it.isHidden }
-fun File.getHiddenDirectory() = generateSequence(this) { it.parentFile }.find { it.isHidden }
+fun m(i: Int): Int {
+    print("m$i ")
+    return i
+}
+
+fun f(i: Int): Boolean {
+    print("f$i ")
+    return i % 2 == 0
+}
