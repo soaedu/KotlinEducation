@@ -25,7 +25,7 @@ fun main() {
 
     // #3
     // Use '$' to check match
-    val regex_3 = Regex("\$hello")
+    val regex_3 = Regex("hello$")
 
     // #4
     // Use '.' to check match
@@ -64,40 +64,40 @@ fun main() {
 
     println(
         "Show result of matching: " +
-        "\n\t'$text_1' contains '$regex_1' (literal characters): ${regex_1.containsMatchIn(text_1)}" +
-        "\n\t-----------------------------------------------------" +
-        "\n\t'$regex_2' match to '$text_1': ${regex_2.matches(text_1)}" +
-        "\n\t'$regex_2' match to '$text_2': ${regex_2.matches(text_2)}" +
-        "\n\t-----------------------------------------------------" +
-        "\n\t'$regex_3' match to '$text_1': ${regex_3.matches(text_1)}" +
-        "\n\t'$regex_3' match to '$text_2': ${regex_3.matches(text_2)}" +
-        "\n\t-----------------------------------------------------" +
-        "\n\t'$regex_4' match to '$text_4_1': ${regex_4.matches(text_4_1)}" +
-        "\n\t'$regex_4' match to '$text_4_2': ${regex_4.matches(text_4_2)}" +
-        "\n\t-----------------------------------------------------" +
-        "\n\t\"\" matches to '$regex_5': ${regex_5.matches(text_5_1)}" +
-        "\n\t'$text_5_2' matches to '$regex_5': ${regex_5.matches(text_5_2)}" +
-        "\n\t'$text_5_3' matches to '$regex_5': ${regex_5.matches(text_5_3)}" +
-        "\n\t-----------------------------------------------------" +
-        "\n\t\"\" matches to '$regex_6_1': ${regex_6_1.matches(text_5_1)}" +
-        "\n\t'$text_5_2' matches to '$regex_6_1': ${regex_6_1.matches(text_5_2)}" +
-        "\n\t'$text_5_3' matches to '$regex_6_1': ${regex_6_1.matches(text_5_3)}" +
-        "\n\t'$regex_6_2' find in '$text_6_1': ${regex_6_2.find(text_6_1)?.value}" +
-        "\n\t-----------------------------------------------------" +
-        "\n\t\"\" matches to '$regex_7': ${regex_7.matches(text_5_1)}" +
-        "\n\t'$text_5_2' matches to '$regex_7': ${regex_7.matches(text_5_2)}" +
-        "\n\t'$text_5_3' matches to '$regex_7': ${regex_7.matches(text_5_3)}" +
-        "\n\t-----------------------------------------------------" +
-        "\n\t\"\" matches to '$regex_8': ${regex_8.matches(text_5_1)}" +
-        "\n\t'$text_5_2' matches to '$regex_8': ${regex_8.matches(text_5_2)}" +
-        "\n\t'$text_5_3' matches to '$regex_8': ${regex_8.matches(text_5_3)}"+
-        "\n\t-----------------------------------------------------" +
-        "\n\t\"\" matches to '$regex_9': ${regex_9.matches(text_5_1)}" +
-        "\n\t'$text_5_2' matches to '$regex_9': ${regex_9.matches(text_5_2)}" +
-        "\n\t'$text_5_3' matches to '$regex_9': ${regex_9.matches(text_5_3)}" +
-        "\n\t-----------------------------------------------------" +
-        "\n\t\"\" matches to '$regex_10': ${regex_10.matches(text_5_1)}" +
-        "\n\t'$text_5_2' matches to '$regex_10': ${regex_10.matches(text_5_2)}" +
-        "\n\t'$text_5_3' matches to '$regex_10': ${regex_10.matches(text_5_3)}"
+                "\n\t'$text_1' contains '$regex_1' (literal characters): ${regex_1.containsMatchIn(text_1)}" +
+                "\n\t-----------------------------------------------------" +
+                "\n\t'$regex_2' match found in '$text_1': ${regex_2.containsMatchIn(text_1)}" +
+                "\n\t'$regex_2' match found in '$text_2': ${regex_2.containsMatchIn(text_2)}" +
+                "\n\t-----------------------------------------------------" +
+                "\n\t'$regex_3' match found in '$text_1': ${regex_3.containsMatchIn(text_1)}" +
+                "\n\t'$regex_3' match found in '$text_2': ${regex_3.containsMatchIn(text_2)}" +
+                "\n\t-----------------------------------------------------" +
+                "\n\t'$regex_4' match to '$text_4_1': ${regex_4.matches(text_4_1)}" +
+                "\n\t'$regex_4' match to '$text_4_2': ${regex_4.matches(text_4_2)}" +
+                "\n\t-----------------------------------------------------" +
+                "\n\t\"\" matches to '$regex_5': ${regex_5.matches(text_5_1)}" +
+                "\n\t'$text_5_2' matches to '$regex_5': ${regex_5.matches(text_5_2)}" +
+                "\n\t'$text_5_3' matches to '$regex_5': ${regex_5.matches(text_5_3)}" +
+                "\n\t-----------------------------------------------------" +
+                "\n\t\"\" matches to '$regex_6_1': ${regex_6_1.matches(text_5_1)}" +
+                "\n\t'$text_5_2' matches to '$regex_6_1': ${regex_6_1.matches(text_5_2)}" +
+                "\n\t'$text_5_3' matches to '$regex_6_1': ${regex_6_1.matches(text_5_3)}" +
+                "\n\t'$regex_6_2' find in '$text_6_1': ${regex_6_2.find(text_6_1)?.value}" +
+                "\n\t-----------------------------------------------------" +
+                "\n\t\"\" matches to '$regex_7': ${regex_7.matches(text_5_1)}" +
+                "\n\t'$text_5_2' matches to '$regex_7': ${regex_7.matches(text_5_2)}" +
+                "\n\t'$text_5_3' matches to '$regex_7': ${regex_7.matches(text_5_3)}" +
+                "\n\t-----------------------------------------------------" +
+                "\n\t\"\" matches to '$regex_8': ${regex_8.matches(text_5_1)}" +
+                "\n\t'$text_5_2' matches to '$regex_8': ${regex_8.matches(text_5_2)}" +
+                "\n\t'$text_5_3' matches to '$regex_8': ${regex_8.matches(text_5_3)}"+
+                "\n\t-----------------------------------------------------" +
+                "\n\t\"\" matches to '$regex_9': ${regex_9.matches(text_5_1)}" +
+                "\n\t'$text_5_2' matches to '$regex_9': ${regex_9.matches(text_5_2)}" +
+                "\n\t'$text_5_3' matches to '$regex_9': ${regex_9.matches(text_5_3)}" +
+                "\n\t-----------------------------------------------------" +
+                "\n\t\"\" matches to '$regex_10': ${regex_10.matches(text_5_1)}" +
+                "\n\t'$text_5_2' matches to '$regex_10': ${regex_10.matches(text_5_2)}" +
+                "\n\t'$text_5_3' matches to '$regex_10': ${regex_10.matches(text_5_3)}"
     )
 }
