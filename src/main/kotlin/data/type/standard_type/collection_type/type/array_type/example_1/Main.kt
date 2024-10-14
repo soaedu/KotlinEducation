@@ -1,4 +1,4 @@
-package data.type.standard_type.array_type.example_1
+package data.type.standard_type.collection_type.type.array_type.example_1
 
 import data.helpers.printItems
 
