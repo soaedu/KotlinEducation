@@ -16,3 +16,7 @@ fun <T> printItems(header: String = "", list: List<T>) {
 fun <T> printItems(header: String = "", array: Array<T>) {
     printItems(header, array.toList())
 }
+
+fun <T> printItems(header: String = "", set: Set<T>) {
+    printItems(header, set.toList())
+}

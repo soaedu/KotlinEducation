@@ -1,4 +1,4 @@
-package data.type.standard_type.array_type.example_3
+package data.type.standard_type.collection_type.type.array_type.example_3
 
 fun main() {
     val ints = intArrayOf(1, 2, 3)
