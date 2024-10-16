@@ -1,4 +1,4 @@
-package src.data.type.standard_type.array_type.example_1;
+package src.data.type.standard_type.collection_type.type.array_type.example_1;
 
 import static data.helpers.PrintDataKt.printItems;
 
