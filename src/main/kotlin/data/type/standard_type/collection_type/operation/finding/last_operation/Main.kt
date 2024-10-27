@@ -5,12 +5,13 @@ import data.type.standard_type.collection_type.operation.Manager
 import data.type.standard_type.collection_type.operation.Person
 
 /**
- * Function 'last()' is used to find the last element in the collection that match to a predicate.
+ * Method finds the last element in the collection that match to a predicate.
  *
  * If element is not found, 'NoSuchElementException' is thrown.
  */
 fun main() {
     // #1
+    // Use 'last' to find last fruit that match to a predicate.
     val targetValue_1 = "A"
     val targetValue_2 = "a"
     // val targetValue_3 = "F"
@@ -26,6 +27,7 @@ fun main() {
     )
 
     // #2
+    // Use 'last' to find last person that match to a predicate.
     val targetValue_4 = 20
     // val targetValue_5 = 50
     val listOfPeople = listOf(
@@ -41,5 +43,13 @@ fun main() {
         "\n\tlast person whose age is greater than '$targetValue_4': $findResult_4" +
         "\n\tlast person that is female: $findResult_5"
         // "\n\tlast person whose age is greater than '$targetValue_5': $findResult_6"
+    )
+
+    // #3
+    // Use 'last' to find last element in empty list (will produce an error).
+    val emptyList = emptyList<String>()
+    val findResult_6 = emptyList.last()
+    println(
+        "Show find result applied to 'emptyList': $findResult_6"
     )
 }
