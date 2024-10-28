@@ -1,4 +1,4 @@
-package syntax.functions.function_type.stdlib_func.example_1.scope_func.example_6
+package syntax.functions.function_type.stdlib_func.scope_func.example_6
 
 import kotlin.random.Random
 
@@ -9,7 +9,7 @@ import kotlin.random.Random
  *      return if (predicate(this)) this else null
  * }
  *
- * 'takeIf'/'takeUnless' - are filtering functions for a single object
+ * 'takeIf'/'takeUnless' - filter functions for a single object
  *
  * takeIf()     - returns the 'receiver object' if it satisfies the given predicate,
  *                  otherwise returns 'null'

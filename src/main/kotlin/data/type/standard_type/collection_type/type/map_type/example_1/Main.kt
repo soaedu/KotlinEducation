@@ -1,6 +1,8 @@
 package data.type.standard_type.collection_type.type.map_type.example_1
 
 import data.helpers.printItems
+import java.util.*
+import kotlin.collections.LinkedHashMap
 
 fun main() {
     // Read-only instances
@@ -69,6 +71,15 @@ fun main() {
         "two" to 2
     )
 
+    // #10
+    // Use 'TreeMap' to create a mutable map.
+    val rangeOfChar = 'A'..'F'
+    val map_10 = TreeMap<Char, String>()
+    for (char in rangeOfChar) {
+        val binaryString = Integer.toBinaryString(char.code)
+        map_10[char] = binaryString
+    }
+
     printItems(
         "Show info about read-only empty map created with 'mapOf':" +
             "\n\tclass name: ${map_1.javaClass.canonicalName}",
@@ -113,5 +124,10 @@ fun main() {
         "Show info about mutable map created with 'sortedMapOf':" +
             "\n\tclass name: ${map_9.javaClass.canonicalName}",
         map_9
+    )
+    printItems(
+        "Show info about mutable map created with 'TreeMap':" +
+            "\n\tclass name: ${map_10.javaClass.canonicalName}",
+        map_10
     )
 }

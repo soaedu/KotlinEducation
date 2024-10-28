@@ -54,6 +54,10 @@ fun main() {
     //      * getOrDefault/getOrElse        - to read the value from the map if exists,
     //                                          if it doesn't, get value/function specified
     //                                          as an alternative.
+    //      * getOrPut(key, defaultValue)   - to get value for the specified key if the value
+    //                                          is present and not null. If it's not call the
+    //                                          'default' function and put its result into the map
+    //                                          under the given key and return the call result.
     println(
         "\nShow result of retrieving from 'mutableMap_1':" +
                 "\n\tvalue with existing key '$targetKey_1' (get): ${mutableMap_1.get(targetKey_1)}" +
@@ -67,7 +71,9 @@ fun main() {
                 "\n\tvalue with existing key '$targetKey_1' (getOrElse): " +
                 "${mutableMap_1.getOrElse(targetKey_1) { "Undefined"} }" +
                 "\n\tvalue with not existing key '$targetKey_2' (getOrElse): " +
-                "${mutableMap_1.getOrElse(targetKey_2) { "Undefined"} }"
+                "${mutableMap_1.getOrElse(targetKey_2) { "Undefined"} }" +
+                "\n\tvalue with not existing key '$targetKey_2' (getOrPut): " +
+                "${mutableMap_1.getOrPut(targetKey_2) { targetValue_2 } }"
     )
 
     // #4
