@@ -6,7 +6,7 @@ import data.type.standard_type.collection_type.operation.Person
 
 /**
  * Methods:
- *      * filterNotNull()    - returns the List with non-null elements.
+ *      * filterNotNull()       - returns the List with non-null elements.
  *      * filterNotNullTo(...)  - works the same as 'filterNotNull' but it appends the 'List' with
  *                                  non-null elements to the destination 'List'.
  */
