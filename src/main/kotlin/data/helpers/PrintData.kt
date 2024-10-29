@@ -4,6 +4,10 @@ fun printItems(header: String = "", array: IntArray) {
     printItems(header, array.toList())
 }
 
+fun printItems(header: String = "", array: LongArray) {
+    printItems(header, array.toList())
+}
+
 fun <T> printItems(header: String = "", list: List<T>) {
     if (header.isNotEmpty())
         println("$header: ")
