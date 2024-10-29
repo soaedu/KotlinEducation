@@ -1,4 +1,4 @@
-package syntax.functional_programming.function_type.anonymous_func.lambda_func.example_1
+package syntax.functional_programming.function_type.lambda_func.example_1
 
 fun main() {
     // #1

@@ -1,4 +1,4 @@
-package syntax.functional_programming.function_type.anonymous_func.lambda_func.example_5
+package syntax.functional_programming.function_type.lambda_func.example_5
 
 fun main() {
     val fruits = listOf("", "", "Banana", "Apple", "", "Pear", "Peach",  "", "Plum", "Lemon", "")

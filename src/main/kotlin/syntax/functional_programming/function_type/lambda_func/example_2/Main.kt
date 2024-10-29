@@ -1,4 +1,4 @@
-package syntax.functional_programming.function_type.anonymous_func.lambda_func.example_2
+package syntax.functional_programming.function_type.lambda_func.example_2
 
 fun main() {
     val numbers = listOf(1, 2, 3, 4, 5)
