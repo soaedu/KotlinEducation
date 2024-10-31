@@ -33,3 +33,12 @@ fun <K, V> printItems(header: String = "", map: Map<K, V>) {
         println("\tkey: ${mapEntry.key}, value: ${mapEntry.value}")
     }
 }
+
+fun <T> printItems(header: String, sequence: Sequence<T>) {
+    if (header.isNotEmpty())
+        println("$header: ")
+
+    for (item in sequence) {
+        println("\tvalue: $item")
+    }
+}
