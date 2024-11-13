@@ -9,6 +9,7 @@ build/
 
 ### IntelliJ IDEA ###
 .idea/.name
+.idea/codeStyles/
 .idea/shelf
 .idea/artifacts
 .idea/compiler.xml
